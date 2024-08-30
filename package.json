@@ -1,0 +1,16 @@
+{
+  "name": "domain-checker",
+  "version": "1.0.0",
+  "description": "app to check if a domain is registered or available",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Tyson Thurman",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "unirest": "^0.6.0"
+  },
+  "type": "module"
+}
