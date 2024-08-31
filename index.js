@@ -1,9 +1,21 @@
+import fetch from 'node-fetch';
 import dotenv from 'dotenv';
 dotenv.config();
 
 async function main() {
     // console.log(await checkExpiration(process.env.DOMAIN));
+
     // console.log(await checkAvailability(process.env.DOMAIN));
+
+    checkDomainLink(`http://${process.env.DOMAIN}`)
+    .then(isWorking => {
+        if (isWorking) {
+            console.log("The link works!");
+        } else {
+            console.log("The link is broken.");
+        }
+    });
+    
 }
 
 async function getResponseBody(domain) {
@@ -31,9 +43,7 @@ async function checkAvailability(domain) {
     let body = await getResponseBody(domain);
     let today = new Date();
     let expireDate = body.WhoisRecord.expiresDate;
-    //convert the date from the API from a string to a Date object
     let parsedExpireDate = new Date(expireDate);
-    //compare the dates
 
     let isExpired = parsedExpireDate.getTime() < today.getTime();
     let expiresToday = parsedExpireDate.getTime() === today.getTime();
@@ -46,6 +56,22 @@ async function checkAvailability(domain) {
         }
     } else {
         return `The domain name "${domain}" is in use and not available until ${parsedExpireDate}.`;
+    }
+}
+
+async function checkDomainLink(domain) {
+    try {
+        const response = await fetch(domain);
+        if (response.ok) {
+            console.log(`The URL "${domain}" is working.`);
+            return true;
+        } else {
+            console.log(`The URL "${domain}" returned a status code: ${response.status}.`);
+            return false;
+        }
+    } catch (error) {
+        console.error(`The URL "${domain}" is not working. Error: ${error.message}`);
+        return false;
     }
 }
 
