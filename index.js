@@ -2,7 +2,8 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 async function main() {
-    console.log(await checkExpiration(process.env.DOMAIN));
+    // console.log(await checkExpiration(process.env.DOMAIN));
+    // console.log(await checkAvailability(process.env.DOMAIN));
 }
 
 async function getResponseBody(domain) {
@@ -23,8 +24,29 @@ async function getResponseBody(domain) {
 
 async function checkExpiration(domain) {
     let body = await getResponseBody(domain);
-    // console.log(`${domain} expires on ${body.WhoisRecord.expiresDate}`);
     return `${domain} expires on ${body.WhoisRecord.expiresDate}`
+}
+
+async function checkAvailability(domain) {
+    let body = await getResponseBody(domain);
+    let today = new Date();
+    let expireDate = body.WhoisRecord.expiresDate;
+    //convert the date from the API from a string to a Date object
+    let parsedExpireDate = new Date(expireDate);
+    //compare the dates
+
+    let isExpired = parsedExpireDate.getTime() < today.getTime();
+    let expiresToday = parsedExpireDate.getTime() === today.getTime();
+
+    if (isExpired) {
+        if (expiresToday) {
+            return `The domain name "${domain}" expires today and should become available very soon unless renewed by the owner.`;
+        } else {
+            return `The domain name "${domain}" expired on ${parsedExpireDate} and should be available.`;
+        }
+    } else {
+        return `The domain name "${domain}" is in use and not available until ${parsedExpireDate}.`;
+    }
 }
 
 main();
