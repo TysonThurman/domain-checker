@@ -7,15 +7,14 @@ async function main() {
 
     // console.log(await checkAvailability(process.env.DOMAIN));
 
-    checkDomainLink(`http://${process.env.DOMAIN}`)
-    .then(isWorking => {
-        if (isWorking) {
-            console.log("The link works!");
-        } else {
-            console.log("The link is broken.");
-        }
-    });
-    
+    // checkDomainLink(`http://${process.env.DOMAIN}`)
+    // .then(isWorking => {
+    //     if (isWorking) {
+    //         console.log("The link works!");
+    //     } else {
+    //         console.log("The link is broken.");
+    //     }
+    // });
 }
 
 async function getResponseBody(domain) {
