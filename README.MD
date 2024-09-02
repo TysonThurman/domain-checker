@@ -43,8 +43,8 @@ To get started using the code, see below.
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Domain Details: Get information about who registered the domain (registrar) and when the domain will expire.
-- [ ] DNS Records: Look up the DNS records (IP addresses) for each domain.
+- [x] Domain Details: Get information about who registered the domain (registrar) and when the domain will expire.
+- [x] Reorganize folder structure
 - [ ] Add front end for the application
 
 See the [open issues](https://github.com/TysonThurman/domain-checker/issues) for a full list of proposed features (and known issues).
