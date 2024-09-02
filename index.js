@@ -11,9 +11,9 @@ async function main() {
     let body = await getResponseBody(process.env.DOMAIN);
     // console.log(await getResponseBody(process.env.DOMAIN));
 
-    // console.log(await checkExpiration(process.env.DOMAIN));
+     console.log(await checkExpiration(process.env.DOMAIN, body));
 
-    // console.log(await checkAvailability(process.env.DOMAIN));
+    // console.log(await checkAvailability(process.env.DOMAIN, body));
 
     // checkDomainLink(`http://${process.env.DOMAIN}`)
     // .then(isWorking => {
@@ -24,7 +24,7 @@ async function main() {
     //     }
     // });
 
-    console.log(await getRegistrantDetails(process.env.DOMAIN, body));
+    //console.log(await getRegistrantDetails(process.env.DOMAIN, body));
 }
 
 main();
