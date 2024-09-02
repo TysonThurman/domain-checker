@@ -2,7 +2,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/TysonThurman/domain-checker">
-    <img src="images/logo.png" alt="Logo" width="380" height="380">
+    <img src="images/logo.png" alt="Logo" width="200" height="200">
   </a>
 
 <h3 align="center">Domain Checker</h3>
