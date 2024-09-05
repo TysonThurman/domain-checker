@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import FormComponent from './FormComponent';
 import './App.css'
 
 const API_URL = 'http://localhost:5001';
@@ -13,7 +14,10 @@ function App() {
 
 return (
   <div>
-      <h1>{message}</h1>
+      {/* <h1>{message}</h1> */}
+      <h2>Domain Checker</h2>
+      <p>Please enter your domain name below:</p>
+      <FormComponent />
   </div>
 );
 }
