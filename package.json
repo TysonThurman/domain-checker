@@ -4,12 +4,14 @@
   "description": "app to check if a domain is registered or available",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "server": "node server/server.js"
   },
   "author": "Tyson Thurman",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^16.4.5",
+    "express": "^4.19.2",
     "node-fetch": "^3.3.2"
   },
   "type": "module"
