@@ -1,0 +1,13 @@
+input {
+    margin-right: 10px;
+  }
+  
+  button {
+    cursor: pointer;
+  }
+  
+  div {
+    margin-top: 20px;
+    font-size: 16px;
+  }
+  
