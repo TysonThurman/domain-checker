@@ -16,7 +16,7 @@ return (
   <div>
       {/* <h1>{message}</h1> */}
       <h2>Domain Checker</h2>
-      <p>Please enter your domain name below:</p>
+      <p>Please enter a domain name below:</p>
       <FormComponent />
   </div>
 );
