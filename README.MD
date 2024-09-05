@@ -61,6 +61,7 @@ To get started using the code, see below.
 - [ ] Configure ESLint.
 - [ ] Configure Prettier
 - [ ] Redesign the front end for better UI/UX
+- [ ] Add testing (mocha, JEST, or similar) package/library
 
 More roadmap features to come...
 
