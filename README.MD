@@ -31,7 +31,7 @@ To get started using the code, see below.
    ```sh
    git clone https://github.com/TysonThurman/domain-checker.git
    ```
-3. Install NPM packages
+3. Install NPM packages from root directory
    ```sh
    npm install
    ```
@@ -39,13 +39,24 @@ To get started using the code, see below.
    ```js
    API_KEY='ENTER YOUR API';
    ```
+5. Install ReactJS front-end packages
+   ```sh
+   cd client
+   npm install
+   ```
+6. You can then run the ReactJS front-end in dev
+   ```sh 
+   npm run dev
+   ```
 
 <!-- ROADMAP -->
 ## Roadmap
 
 - [x] Domain Details: Get information about who registered the domain (registrar) and when the domain will expire.
 - [x] Reorganize folder structure
-- [ ] Add front end for the application
+- [x] Add front end for the application
+
+More roadmap features to come...
 
 See the [open issues](https://github.com/TysonThurman/domain-checker/issues) for a full list of proposed features (and known issues).
 
