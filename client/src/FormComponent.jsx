@@ -1,21 +1,21 @@
 import { useState } from 'react';
 import './FormComponent.css';
 
+const API_URL = 'http://localhost:5001';
+
 const FormComponent = () => {
-  // State to manage input value and results
   const [inputValue, setInputValue] = useState('');
   const [result, setResult] = useState('');
 
-  // Handle input change
   const handleInputChange = (e) => {
     setInputValue(e.target.value);
   };
 
-  // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Process the input and update the result (e.g., echo the input)
-    setResult(`You entered: ${inputValue}`);
+    fetch(API_URL + `/api/${inputValue}`)
+        .then(response => response.json())
+        .then(data => setResult(data));
     // Clear the input
     setInputValue('');
   };
