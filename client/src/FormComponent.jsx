@@ -11,12 +11,21 @@ const FormComponent = () => {
     setInputValue(e.target.value);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    fetch(API_URL + `/api/${inputValue}`)
-        .then(response => response.json())
-        .then(data => setResult(data));
-    // Clear the input
+    try {
+        const response = await fetch(API_URL + `/api/${inputValue}`);
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      const data = await response.json();
+      console.log(data);
+      // setResult(`Domain Name: ${data.WhoisRecord.domainName}`);
+      setResult(JSON.stringify(data));
+    } catch (error) {
+        console.log(error);
+    }
+    
     setInputValue('');
   };
 
