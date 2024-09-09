@@ -62,6 +62,7 @@ To get started using the code, see below.
 - [ ] Configure Prettier
 - [ ] Redesign the front end for better UI/UX
 - [ ] Add testing (mocha, JEST, or similar) package/library
+- [ ] Implement Light and Dark themes
 
 More roadmap features to come...
 
