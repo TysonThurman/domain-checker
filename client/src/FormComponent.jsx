@@ -1,11 +1,12 @@
 import { useState } from 'react';
 import './FormComponent.css';
+import ReactJson from 'react-json-view'
 
 const API_URL = 'http://localhost:5001';
 
 const FormComponent = () => {
   const [inputValue, setInputValue] = useState('');
-  const [result, setResult] = useState('');
+  const [result, setResult] = useState(0);
 
   const handleInputChange = (e) => {
     setInputValue(e.target.value);
@@ -20,12 +21,10 @@ const FormComponent = () => {
       }
       const data = await response.json();
       console.log(data);
-      // setResult(`Domain Name: ${data.WhoisRecord.domainName}`);
-      setResult(JSON.stringify(data));
+      setResult(data.WhoisRecord);
     } catch (error) {
         console.log(error);
     }
-    
     setInputValue('');
   };
 
@@ -40,7 +39,7 @@ const FormComponent = () => {
         />
         <button type="submit">Submit</button>
       </form>
-      <div>{result}</div>
+      {result ? <ReactJson src={result} /> : ''}
     </div>
   );
 };
