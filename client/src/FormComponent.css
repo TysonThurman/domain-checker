@@ -10,4 +10,7 @@ input {
     margin-top: 20px;
     font-size: 16px;
   }
+  #resultdiv div {
+    margin-top: 0px !important
+  }
   
