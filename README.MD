@@ -13,6 +13,11 @@
   </p>
 </div>
 
+<!-- Screenshots -->
+## Screenshots
+[screenshot 1](images/screenshots/Screenshot%201.png)
+[screenshot 2](images/screenshots/Screenshot%202.png)
+
 <!-- GETTING STARTED -->
 ## Getting Started
 
