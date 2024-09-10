@@ -63,6 +63,7 @@ To get started using the code, see below.
 - [ ] Redesign the front end for better UI/UX
 - [ ] Add testing (mocha, JEST, or similar) package/library
 - [ ] Implement Light and Dark themes
+- [ ] Add screenshots of the app to the README
 
 More roadmap features to come...
 
