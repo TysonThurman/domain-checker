@@ -13,7 +13,7 @@
   </p>
 </div>
 
-<!-- Screenshots -->
+<!-- Screenshots! -->
 ## Screenshots
 <img src="images/screenshots/Screenshot 1.png" alt="Screenshot 1">
 <img src="images/screenshots/Screenshot 2.png" alt="Screenshot 2">
