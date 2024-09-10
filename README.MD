@@ -15,11 +15,9 @@
 
 <!-- Screenshots -->
 ## Screenshots
-<img src="images/screenshots/Screenshot 1.png" alt="Screenshot 1" width="400">
-<img src="images/screenshots/Screenshot 2.png" alt="Screenshot 2" width="400">
-<img src="images/screenshots/Screenshot 3.png" alt="Screenshot 3" width="400">
-<img src="images/screenshots/Screenshot 4.png" alt="Screenshot 4" width="400">
-<img src="images/screenshots/Screenshot 5.png" alt="Screenshot 5" width="400">
+<img src="images/screenshots/Screenshot 1.png" alt="Screenshot 1">
+<img src="images/screenshots/Screenshot 2.png" alt="Screenshot 2">
+<img src="images/screenshots/Screenshot 3.png" alt="Screenshot 3">
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -71,7 +69,7 @@ To get started using the code, see below.
 - [ ] Redesign the front end for better UI/UX
 - [ ] Add testing (mocha, JEST, or similar) package/library
 - [ ] Implement Light and Dark themes
-- [ ] Add screenshots of the app to the README
+- [x] Add screenshots of the app to the README
 
 More roadmap features to come...
 
