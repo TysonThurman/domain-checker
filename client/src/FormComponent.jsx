@@ -39,7 +39,10 @@ const FormComponent = () => {
         />
         <button type="submit">Submit</button>
       </form>
+      <div id="resultdiv">
       {result ? <ReactJson src={result} displayDataTypes={false} theme={"monokai"} name={result.domainName} collapsed={true} /> : ''}
+      </div>
+
     </div>
   );
 };
