@@ -7,3 +7,4 @@ npm-debug.log
 .AppleDouble
 .LSOverride
 docker-compose.yml
+app.log
