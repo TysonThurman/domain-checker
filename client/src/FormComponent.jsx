@@ -8,6 +8,8 @@ const FormComponent = () => {
   const [inputValue, setInputValue] = useState('');
   const [result, setResult] = useState(0);
   const [collapsed, setCollapsed] = useState(false);
+  const [errorText, setErrorText] = useState('');
+  const [errorDisplay, setErrorDisplay] = useState(false);
 
   const handleInputChange = (e) => {
     setInputValue(e.target.value);
@@ -15,6 +17,11 @@ const FormComponent = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if(!inputValue || inputValue == '') {
+      setErrorDisplay(true);
+      setErrorText("You must enter a domain!");
+      return;
+    }
     try {
         const response = await fetch(API_URL + `/api/${inputValue}`);
       if (!response.ok) {
@@ -27,6 +34,7 @@ const FormComponent = () => {
         console.log(error);
     }
     setInputValue('');
+    setErrorDisplay(false);
   };
 
   const handleCollapse = () => {
@@ -43,7 +51,9 @@ const FormComponent = () => {
           placeholder="Enter something..."
         />
         <button type="submit">Submit</button>
-        <br /><br />
+        <p className={`display-${errorDisplay} error-text`}>{errorText}</p>
+        <br className={`display-${!errorDisplay}`} />
+        <br className={`display-${!errorDisplay}`} />
         <label htmlFor="collapsed">Collapse All</label>
         <input onChange={handleCollapse} id="collapsed" type="checkbox" />
       </form>

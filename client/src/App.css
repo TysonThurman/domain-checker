@@ -44,3 +44,15 @@
 label[for=collapsed] {
   font-size: 1em;
 }
+
+.error-text {
+  color:red;
+}
+
+.display-false {
+  display: none;
+}
+
+.display-true {
+  display:block;
+}
