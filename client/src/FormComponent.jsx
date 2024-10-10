@@ -54,11 +54,18 @@ const FormComponent = () => {
         <p className={`display-${errorDisplay} error-text`}>{errorText}</p>
         <br className={`display-${!errorDisplay}`} />
         <br className={`display-${!errorDisplay}`} />
-        <label htmlFor="collapsed">Collapse All</label>
-        <input onChange={handleCollapse} id="collapsed" type="checkbox" />
+        {/* <label htmlFor="collapsed">Collapse All</label>
+        <input onChange={handleCollapse} id="collapsed" type="checkbox" /> */}
       </form>
       <div id="resultdiv">
-      {result ? <ReactJson src={result} displayDataTypes={false} theme={"monokai"} name={result.domainName} collapsed={collapsed} /> : ''}
+      {result ? 
+      <div>
+        <div className="collapse-checkbox">
+          <label htmlFor="collapsed">Collapse All</label>
+          <input onChange={handleCollapse} id="collapsed" type="checkbox" />
+        </div>
+        <ReactJson src={result} displayDataTypes={false} theme={"monokai"} name={result.domainName} collapsed={collapsed} /> </div>: ''
+      }
       </div>
 
     </div>

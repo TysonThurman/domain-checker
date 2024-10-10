@@ -56,3 +56,13 @@ label[for=collapsed] {
 .display-true {
   display:block;
 }
+
+.eg-text {
+  background-color: #383838;
+  padding:3px;
+  font-style: italic;
+}
+
+.collapse-checkbox {
+  margin-bottom:1.5em;
+}
