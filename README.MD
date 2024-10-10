@@ -70,6 +70,7 @@ To get started using the code, see below.
 - [ ] Add testing (mocha, JEST, or similar) package/library
 - [ ] Implement Light and Dark themes
 - [x] Add screenshots of the app to the README
+- [x] Add checkbox for expand/collapse all
 
 More roadmap features to come...
 
