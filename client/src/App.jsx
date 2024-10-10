@@ -5,7 +5,7 @@ function App() {
 return (
   <div>
       <h2>Domain Checker</h2>
-      <p>Please enter a domain name below:</p>
+      <p>Please enter a domain name below <span className='eg-text'>(eg. google.com)</span>:</p>
       <FormComponent />
   </div>
 );
